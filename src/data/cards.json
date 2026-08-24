@@ -1,0 +1,17 @@
+[
+  {
+    "id": "001",
+    "name": "Hello Kitty and Friends",
+    "image": "/images/cards/001.svg"
+  },
+  {
+    "id": "002",
+    "name": "Hello Kitty and Friends",
+    "image": "/images/cards/002.svg"
+  },
+  {
+    "id": "003",
+    "name": "Hello Kitty and Friends",
+    "image": "/images/cards/003.svg"
+  }
+]

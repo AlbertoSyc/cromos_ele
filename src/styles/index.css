@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  color: #302a31;
+  background: #fff8fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 210, 226, .42), transparent 25rem),
+    radial-gradient(circle at 90% 15%, rgba(255, 238, 184, .42), transparent 24rem),
+    #fff8fa;
+}
+
+button, input { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+
+.safe-bottom { padding-bottom: calc(6rem + env(safe-area-inset-bottom)); }
+.bottom-safe { padding-bottom: env(safe-area-inset-bottom); }
+
+.card-image {
+  aspect-ratio: 1 / 1.18;
+  object-fit: contain;
+}
+
+.celebration {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 80;
+  overflow: hidden;
+}
+
+.spark {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  animation: spark 1.4s ease-out forwards;
+}
+
+@keyframes spark {
+  0% { transform: translate(-50%, -50%) scale(.3) rotate(0); opacity: 0; }
+  15% { opacity: 1; }
+  100% {
+    transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(1.1) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

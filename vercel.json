@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/profile.ts": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}
