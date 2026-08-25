@@ -1,3 +1,4 @@
+import { LogOut } from 'lucide-react';
 import type { Card } from '../types';
 import { stats } from '../utils/stats';
 
@@ -5,15 +6,19 @@ export default function HomePage({
   profile,
   cards,
   userCards,
+  onLogout,
 }: {
   profile: string;
   cards: Card[];
   userCards: Record<string, number>;
+  onLogout: () => void;
 }) {
   const s = stats(cards, userCards);
 
   // Cromos que el usuario todavía no tiene
-  const pendingCards = cards.filter((card) => (userCards[card.id] ?? 0) === 0);
+  const pendingCards = cards.filter(
+    (card) => (userCards[card.id] ?? 0) === 0
+  );
 
   // Agrupar los cromos pendientes por "name"
   const pendingByName = pendingCards.reduce<Record<string, Card[]>>(
@@ -32,12 +37,25 @@ export default function HomePage({
   return (
     <div className="space-y-5">
       {/* CABECERA */}
-      <header>
-        <p className="text-sm font-bold text-gray-400">Tu colección</p>
+      <header className="flex items-center justify-between">
+        <div>
+          <p className="text-sm font-bold text-gray-400">
+            Tu colección
+          </p>
 
-        <h1 className="text-3xl font-extrabold text-gray-800">
-          Hola, {profile}
-        </h1>
+          <h1 className="text-3xl font-extrabold text-gray-800">
+            Hola, {profile}
+          </h1>
+        </div>
+
+        {/* CAMBIAR PERFIL */}
+        <button
+          onClick={onLogout}
+          className="rounded-xl bg-white p-3 text-gray-500 shadow-sm ring-1 ring-gray-100"
+          title="Cambiar Perfil"
+        >
+          <LogOut size={20} />
+        </button>
       </header>
 
       {/* RESUMEN DE LA COLECCIÓN */}
