@@ -2,17 +2,17 @@
   {
     "id": "001",
     "name": "HELLO KITTY",
-    "image": "/images/cards/001.svg"
+    "image": "/images/cards/001.png"
   },
   {
     "id": "002",
     "name": "HELLO KITTY",
-    "image": "/images/cards/002.svg"
+    "image": "/images/cards/002.png"
   },
   {
     "id": "003",
     "name": "HELLO KITTY",
-    "image": "/images/cards/003.svg"
+    "image": "/images/cards/003.png"
   },
   {
     "id": "004",
@@ -47,12 +47,12 @@
   {
     "id": "010",
     "name": "MY MELODY",
-    "image": "/images/cards/010.svg"
+    "image": "/images/cards/010.png"
   },
   {
     "id": "011",
     "name": "MY MELODY",
-    "image": "/images/cards/011.svg"
+    "image": "/images/cards/011.png"
   },
   {
     "id": "012",
@@ -87,7 +87,7 @@
   {
     "id": "018",
     "name": "MY MELODY",
-    "image": "/images/cards/018.svg"
+    "image": "/images/cards/018.png"
   },
   {
     "id": "019",
